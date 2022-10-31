@@ -1,0 +1,29 @@
+@import './config.scss';
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  .homeImg {
+    width: 230px;
+  }
+}
+
+@include lgScreen($wideScreen) {
+  .home {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 40px;
+    .homeImg {
+      height: 40rem;
+      min-width: 40rem;
+    }
+    .hometext {
+      margin-right: 9rem;
+      padding-left: 10rem;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+$NavColor: #f5f5f5;
+
+$color: #000;
+
+$wideScreen: 768px;
+
+@mixin lgScreen($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+  //@media only screen and (min-width: 768px)
+}

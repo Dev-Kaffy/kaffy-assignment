@@ -1,0 +1,33 @@
+@import './config.scss';
+
+@mixin flexFunc($direction) {
+  display: flex;
+  flex-direction: $direction;
+  gap: 30px;
+}
+
+.NavBar {
+  margin: 20px;
+  @include flexFunc(row);
+
+  .NavLink {
+    @include flexFunc(row);
+    li {
+      list-style: none;
+    }
+  }
+}
+
+@include lgScreen($wideScreen) {
+  .NavBar {
+    margin: 40px;
+    @include flexFunc(row);
+    justify-content: space-between;
+    align-self: center;
+
+    .NavLink {
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+}
